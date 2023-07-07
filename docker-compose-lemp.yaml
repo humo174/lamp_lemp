@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - '80:80'
+    volumes:
+      - './public_html:/var/www/html'
+      - './nginx/conf.d:/etc/nginx/conf.d'
+    depends_on:
+      - php
+
+  php:
+    build: ./php
+    restart: always
+    volumes:
+      - './public_html:/var/www/html'
+      - './php/cfg/:/usr/local/etc/php/'
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - './mariadb:/var/lib/mysql'
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - '8080:80'
+    environment:
+      - PMA_HOST=mariadb
+    depends_on:
+      - mariadb
+
+#  adminer:
+#    image: adminer
+#    restart: always
+#    ports:
+#      - '8080:8080'
+#    environment:
+#      ADMINER_DESIGN: nette
+#      ADMINER_DEFAULT_SERVER: mariadb
+#    depends_on:
+#      - mariadb

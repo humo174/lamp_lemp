@@ -7,6 +7,7 @@
   <li>PHP-FPM</li>
   <li>MariaDB</li>
   <li>PhpMyAdmin</li>
+  <li>Adminer (Need uncomment in compose file)</li>
 </ul>
 <h3>Development</h3>
 <code>docker compose -f docker-compose-lemp.yaml up -d</code>
@@ -17,6 +18,7 @@
   <li>PHP-FPM</li>
   <li>MariaDB</li>
   <li>PhpMyAdmin</li>
+  <li>Adminer (Need uncomment in compose file)</li>
 </ul>
 <h3>Development</h3>
 <code>docker compose -f docker-compose-lamp.yaml up -d</code>

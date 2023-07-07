@@ -1,4 +1,4 @@
-# LAMP or LEMP via Docker
+# LAMP/LEMP via Docker
 
 <h2>LEMP</h2>
 <h3>Services</h3>

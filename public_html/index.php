@@ -1,6 +1,8 @@
 <h1>
-	<?php 
-		echo "Hello PHP"
-	?>
+	<center>
+		<?php
+			echo "Hello with PHP-FPM"
+		?>
+	</center>	
 </h1>
 <?=phpinfo();?>

@@ -9,7 +9,7 @@
   <li>PhpMyAdmin</li>
   <li>Adminer (Need uncomment in compose file)</li>
 </ul>
-<h3>Development</h3>
+<h3>Deploy</h3>
 <code>docker compose -f docker-compose-lemp.yaml up -d</code>
 <h2>LAMP</h2>
 <h3>Services</h3>
@@ -20,5 +20,5 @@
   <li>PhpMyAdmin</li>
   <li>Adminer (Need uncomment in compose file)</li>
 </ul>
-<h3>Development</h3>
+<h3>Deploy</h3>
 <code>docker compose -f docker-compose-lamp.yaml up -d</code>
